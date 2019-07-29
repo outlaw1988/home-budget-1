@@ -15,5 +15,12 @@
         <th colspan="3" class="table-header"><b>Kategorie</b></th>
       </tr>
     </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td></td>
+        <td>{{category.name}}</td>
+        <td></td>
+      </tr>
+    </tbody>
   </table>
 </div>
