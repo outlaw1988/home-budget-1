@@ -13,8 +13,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 public class CategoryController {
 
-    final
-    CategoryService categoryService;
+    private final CategoryService categoryService;
 
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;

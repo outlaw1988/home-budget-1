@@ -3,24 +3,26 @@
   <div class="break-line"></div>
   <div class="div-center">
     <span>Rodzaj: </span>
-    <select id="sel-type">
-        <option value="expenditure">WYDATEK</option>
-        <option value="income">DOCHÓD</option>
+    <select id="sel-type" (change)="onChangeType($event.target.value)">
+        <option value="EXPENDITURE">WYDATEK</option>
+        <option value="INCOME">DOCHÓD</option>
     </select>
   </div>
   <div class="break-line"></div>
   <table id="categories-table" class="table table-striped category-table">
     <thead>
       <tr>
-        <th colspan="3" class="table-header"><b>Kategorie</b></th>
+        <th colspan="1" class="table-header"><b>Kategorie</b></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let category of categories">
-        <td></td>
         <td>{{category.name}}</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
+  <div class="break-line"></div>
+  <div class="div-center">
+    <a id='add-category' type='button' class='btn btn-success' routerLink="/add-category" [queryParams]="{initType: currentType}">Dodaj kategorię</a>
+  </div>
 </div>
